@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style>
+
+    *{
+        font-family: 'ADLaM Display', cursive;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .button-container {
+    display: flex;
+    justify-content: center;
+    background-color: #ccc;
+    
+    }
+
+    .layout-button {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    }
+
+    .layout-button.active {
+    background-color: black;
+    color: white;
+    }
+
+    .layout {
+    display: none;
+    padding: 20px;
+    }
+
+    .layout-1 {
+    background-color: #80808091;
+    position: absolute;
+    width: 100vw;
+    height: 96vh;
+    }
+    .layout-1 h1{
+        text-align: center;
+    }
+
+    .layout-2 {
+    background-color: #80808091;
+    position: absolute;
+    width: 100vw;
+    height: 96vh;
+    }
+    .layout-2 h1{
+        text-align: center;
+    }
+
+    .layout-3 {
+    background-color: #80808091;
+    position: absolute;
+    width: 100vw;
+    height: 96vh;
+    }
+    .layout-3 h1{
+        text-align: center;
+    }
+
+    #baixo{
+        margin-top: 94vh;
+        font-size: 7px;
+        margin-left: 45%;
+    }
+    li{
+      display: inline-flex;
+      justify-content:space-between;
+    }
+</style>
+
+
+<body>
+        <div class="button-container">
+            <button id="layout-button-1" class="layout-button">Layout 1</button>
+            <button id="layout-button-2" class="layout-button">Layout 2</button>
+            <button id="layout-button-3" class="layout-button">Layout 3</button>
+          </div>
+          
+          <div class="layout layout-1">
+            <div>
+              <ul>
+                <li>teste</li>
+                <li>teste</li>
+              </ul>
+                <h1>Pagina 1</h1>
+                <p>O texto dissertativo – ou dissertação – é um tipo de texto, de natureza teórica, que tem o objetivo principal de expor um tema. De forma geral, um bom texto dissertativo compreende uma exposição minuciosa sobre o tema. Por isso, é fundamental que a pessoa autora demostre ter conhecimentos amplos sobre o assunto.</p>
+            </div>
+            </div>
+          <div class="layout layout-2">
+               <div>
+                <h1>Pagina 2</h1>
+                <p>O texto dissertativo – ou dissertação – é um tipo de texto, de natureza teórica, que tem o objetivo principal de expor um tema. De forma geral, um bom texto dissertativo compreende uma exposição minuciosa sobre o tema. Por isso, é fundamental que a pessoa autora demostre ter conhecimentos amplos sobre o assunto.</p>
+               </div>
+          </div>
+          <div class="layout layout-3">
+            <div>
+                <h1>Pagina 3</h1>
+                <p>O texto dissertativo – ou dissertação – é um tipo de texto, de natureza teórica, que tem o objetivo principal de expor um tema. De forma geral, um bom texto dissertativo compreende uma exposição minuciosa sobre o tema. Por isso, é fundamental que a pessoa autora demostre ter conhecimentos amplos sobre o assunto.</p>
+            </div>
+               
+          </div>
+
+
+          <footer id="baixo">
+            <h1>&copy;2023, Direitos Reservados</h1>
+          </footer>
+
+
+<script> 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const layoutButtons = document.querySelectorAll(".layout-button");
+  const layouts = document.querySelectorAll(".layout");
+
+  layoutButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      // Oculta todos os layouts
+      layouts.forEach(layout => {
+        layout.style.display = "none";
+      });
+
+      // Remove a classe "active" de todos os botões
+      layoutButtons.forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+      // Exibe o layout selecionado
+      layouts[index].style.display = "block";
+
+      // Adiciona a classe "active" ao botão selecionado
+      button.classList.add("active");
+    });
+  });
+});
+</script>
+
+
+
+</body>
+
+</html>
